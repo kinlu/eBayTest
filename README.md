@@ -1,5 +1,7 @@
 # eBayTest
 
+This test is built based on [codeceptJS](https://codecept.io/)
+
 ### Install dependencies
 ```
 npm install
