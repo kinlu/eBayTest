@@ -1,6 +1,6 @@
 # eBayTest
 
-This test is built based on [codeceptJS](https://codecept.io/)
+This test is built on top of [codeceptJS](https://codecept.io/).
 
 ### Install dependencies
 ```
