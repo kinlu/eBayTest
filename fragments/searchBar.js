@@ -2,8 +2,8 @@ const I = actor();
 
 module.exports = {
 
-  searchField: "#gh-ac",
-  searchButton: "#gh-btn",
+  searchField: "body #gh-ac",
+  searchButton: "body #gh-btn",
 
   searchProduct(product) {
     I.fillField(this.searchField, product);

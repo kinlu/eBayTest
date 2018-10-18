@@ -10,7 +10,10 @@
   },
   "scripts": {
     "start:selenium": "selenium-standalone install --config=./config/seleniumConfig.js && selenium-standalone start --config=./config/seleniumConfig.js",
-    "test": "codeceptjs run-multiple parallel --all --steps --reporter mochawesome"
+    "test": "codeceptjs run-multiple parallel --all --steps --reporter mochawesome",
+    "start:seleniumdocker": "docker-compose -f docker-compose-selenium.yaml -p selenium up",
+    "test:docker": "docker run -it --rm -v $PWD:/tests/ --link selenium-hub:selenium --net selenium_default codeception/codeceptjs codeceptjs run-multiple parallel --profile 'selenium-hub' --all --steps --reporter mochawesome",
+    "test:insidedocker": "codeceptjs run-multiple parallel --profile 'selenium-hub' --all --steps --reporter mochawesome"
   },
   "dependencies": {
     "selenium-standalone": "^6.15.3"

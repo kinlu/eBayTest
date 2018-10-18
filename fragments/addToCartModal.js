@@ -2,7 +2,7 @@
 const I = actor();
 
 module.exports = {
-  modal: "#vi_oly_atcRedesignId_overlay-atc-container",
+  modal: "body #vi_oly_atcRedesignId_overlay-atc-container",
 
   closeModal(){
     within(this.modal, function() {
